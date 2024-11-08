@@ -74,7 +74,7 @@ in the defaults.h file.
 Don't forget to put a 4.7k resistor between the 3.3V supply and the DS18B20 data wire.
 
 ## P.S.
-![Screenshot1](https://github.com/SerhiiLe/ThermostatESP01/blob/main/Screenshot_1.jpg)]
-![Screenshot2](https://github.com/SerhiiLe/ThermostatESP01/blob/main/Screenshot_2.jpg)]
-![Screenshot3](https://github.com/SerhiiLe/ThermostatESP01/blob/main/Screenshot_3.jpg)]
+![Screenshot1](https://github.com/SerhiiLe/ThermostatESP01/blob/main/Screenshot_1.jpg)
+![Screenshot2](https://github.com/SerhiiLe/ThermostatESP01/blob/main/Screenshot_2.jpg)
+![Screenshot3](https://github.com/SerhiiLe/ThermostatESP01/blob/main/Screenshot_3.jpg)
 
