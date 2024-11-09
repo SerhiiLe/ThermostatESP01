@@ -6,7 +6,7 @@ Simple, stand-alone version of a thermal relay with web control, on are ESP-01(s
 Построен вокруг библиотек от AlexGyver. Нет MQTT, полная автономия, максимальная простота.
 Можно сделать закладку http://relay.local и не искать IP. Название можно поменять в настройках, при желании.
 После включения пять минут работает точка доступа "AP relay", для простой настройки. Пароля нет.
-При первом подключении рекомендую зайти на точку и выбрать свою сеть WiFi, тогда реле будет доступно всегда.
+При первом подключении рекомендую зайти на реле и выбрать свою сеть WiFi, тогда реле будет доступно всегда.
 
 ### Сборка (компиляция)
 
@@ -28,10 +28,11 @@ Simple, stand-alone version of a thermal relay with web control, on are ESP-01(s
 - иногда при срабатывании реле модуль подвисает
 
 Метод борьбы простой - припаять два конденсатора, один по питанию 3.3В, второй на ноги оптопары
-[![Sample1](https://github.com/SerhiiLe/ThermostatESP01/blob/main/esp01s-relay1.jpg)](https://github.com/SerhiiLe/ThermostatESP01/blob/main/esp01s-relay1.jpg)
-[![Sample2](https://github.com/SerhiiLe/ThermostatESP01/blob/main/esp01s-relay2.png)](https://github.com/SerhiiLe/ThermostatESP01/blob/main/esp01s-relay2.png)
+![Sample1](https://github.com/SerhiiLe/ThermostatESP01/blob/main/esp01s-relay1.jpg)
+![Sample2](https://github.com/SerhiiLe/ThermostatESP01/blob/main/esp01s-relay2.png)
+![Sample3](https://github.com/SerhiiLe/ThermostatESP01/blob/main/esp01s-relay3.png)
 
-Я поставил оба по 470mF, но пишут что емкость может меньше, надо пробовать.
+Я поставил оба по 470mF, но пишут что емкость может быть меньше, надо пробовать.
 
 Это избавляет только дребезга при включении, если нажать копку сброса на плате, то дребезг будет.
 
@@ -45,7 +46,7 @@ Simple, stand-alone version of a thermal relay with web control, on are ESP-01(s
 Built around libraries from AlexGyver. No MQTT, full autonomy, maximum simplicity.
 You can bookmark http://relay.local and not look for IP. The name can be changed in the settings, if desired.
 After power on, the access point "AP relay" works for five minutes, for simple setup. There is no password.
-When connecting for the first time, I recommend going to the point and choosing your WiFi network, then the relay will always be available.
+When connecting for the first time, I recommend going to the relay and choosing your WiFi network, then the relay will always be available.
 
 The interface is in Russian, but can be easily translated into any language, everything that is displayed on the screen is in the "build" function,
 you just need to replace the phrases with your language.
