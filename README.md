@@ -41,6 +41,9 @@ Simple, stand-alone version of a thermal relay with web control, on are ESP-01(s
 
 Не забудьте поставить резистор 4.7к между питанием 3.3В и информационным проводом DS18B20.
 
+Добавил готовый файл прошивки в build/esp8266.esp8266.generic/ ,
+прошить можно с помощью [Flash Download Tools](https://www.espressif.com/en/products/socs/esp8266ex/resources)
+
 ## (EN) Very simple stand-alone thermostat with web control.
 
 Built around libraries from AlexGyver. No MQTT, full autonomy, maximum simplicity.

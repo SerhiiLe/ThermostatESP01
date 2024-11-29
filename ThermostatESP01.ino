@@ -124,20 +124,20 @@ void build(sets::Builder& b) {
             b.Label("lbl_rssi"_h, "RSSI");
 
             if (b.beginButtons()) {
-              // if (b.Button("reboot"_h, "Reboot", sets::Colors::Red)) {
-              //   db.update();
-              //   #ifdef DEBUG
-              //   Serial.flush();
-              //   #endif
-              //   #ifdef ESP32
-              //   WiFi.getSleep();
-              //   #else // ESP8266
-              //   WiFi.forceSleepBegin(); //disable AP & station by calling "WiFi.mode(WIFI_OFF)" & put modem to sleep
-              //   #endif
-              //   LittleFS.end();
-              //   delay(1000);
-              //   ESP.restart();
-              // }
+              if (b.Button("reboot"_h, "Reboot", sets::Colors::Red)) {
+                db.update();
+                #ifdef DEBUG
+                Serial.flush();
+                #endif
+                #ifdef ESP32
+                WiFi.getSleep();
+                #else // ESP8266
+                WiFi.forceSleepBegin(); //disable AP & station by calling "WiFi.mode(WIFI_OFF)" & put modem to sleep
+                #endif
+                LittleFS.end();
+                delay(1000);
+                ESP.restart();
+              }
               if (b.Button("connect"_h, "Connect")) {
                 db.update();
                 b.reload();
@@ -272,15 +272,14 @@ void setup() {
 // Получение температуры, взято из примера GyverDS18
 void tempTick() {
   if(timerTemperature.isReady()) {
-    if (ds.ready()) {         // измерения готовы по таймеру
+    // if (ds.ready()) {        // измерения готовы по таймеру (правильно по инструкции, но работает нестабильно)
       if (ds.readTemp()) {  // если чтение успешно
         cur_temp = ds.getTemp() + db[kk::tcor].toFloat();
       } else {
         cur_temp = -100.0f;
       }
-
-      ds.requestTemp();  // запрос следующего измерения
-    }
+    // }
+    ds.requestTemp();  // запрос следующего измерения
   }
 }
 
